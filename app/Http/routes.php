@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::Resou
+
+Route::post('authenticate', 'AuthenticateController@authenticate');
+
+Route::get('/register',function(){$user = new App\User();
+    $user->name="test";
+ $user->email="test@test.com";
+ $user->password = \Illuminate\Support\Facades\Hash::make("123456");
+ $user->save();
+
+});
